@@ -1,0 +1,5 @@
+mako &
+yambar &
+wpaperd &
+wlsunset -l WLSUNSET_LATITUDE -L WLSUNSET_LONGITUDE &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

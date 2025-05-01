@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <keyboard>
+    <default/>
+    <keybind key="W-Return">
+      <action name="Execute" command="wezterm"/>
+    </keybind>
+    <keybind key="W-z">
+      <action name="Execute" command="wldash"/>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="GoToDesktop" to="left"/>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="GoToDesktop" to="right"/>
+    </keybind>
+    <keybind key="W-S-A-Left">
+      <action name="SendToDesktop" to="left"/>
+    </keybind>
+    <keybind key="W-S-A-Right">
+      <action name="SendToDesktop" to="right"/>
+    </keybind>
+    <keybind key="W-z">
+      <action name="Execute" command="wldash"/>
+    </keybind>
+    <keybind key="XF86_AudioPlay">
+      <action name="Execute" command="playerctl play-pause"/>
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute" command="~/.bin/take-screenshot"/>
+    </keybind>
+  </keyboard>
+  <mouse>
+    <default/>
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="root-menu"/>
+      </mousebind>
+      <mousebind direction="Up" action="Scroll">
+        <!--<action name="GoToDesktop" to="left" wrap="yes" />-->
+      </mousebind>
+      <mousebind direction="Down" action="Scroll">
+        <!--<action name="GoToDesktop" to="right" wrap="yes" />-->
+      </mousebind>
+    </context>
+    <context name="Frame">
+      <mousebind button="A-Left" action="Press"/>
+      <mousebind button="A-Left" action="Drag"/>
+      <mousebind button="A-Right" action="Press"/>
+      <mousebind button="A-Right" action="Drag"/>
+      <mousebind button="W-Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="W-Left" action="Drag">
+        <action name="Move"/>
+      </mousebind>
+      <mousebind button="W-Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="W-Right" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+  </mouse>
+  <theme>
+    <name>GTK</name>
+    <cornerRadius>2</cornerRadius>
+    <font>
+      <name>Adwaita Sans</name>
+    </font>
+  </theme>
+  <desktops number="4" popupTime="400"/>
+  <windowRules>
+    <windowRule identifier="org.wezfurlong.wezterm" serverDecoration="no">
+      <action name="SetDecorations" decorations="border"/>
+    </windowRule>
+  </windowRules>
+  <libinput>
+    <device>
+      <naturalScroll/>
+    </device>
+  </libinput>
+</labwc_config>
